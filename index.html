@@ -13,7 +13,10 @@
 <body>
     <div class="base">
         <div class="container">
-            <div class="item city__search item1">Aktobe</div>
+            <div class="item city__search item1">
+                <input type="text" placeholder="Find a city" class="cityfinder">
+                <input type="button" class="find__btn">
+            </div>
             <div class="tabs_body item2">
                 <div id="tab_01" class="tabs__block item">
                     <p class="temperature">14°</p>
@@ -32,10 +35,9 @@
                         Sunrise: 03:21 <br>
                         Sunset: 18:54
                     </p>
-                    
                 </div>
-                <div id="tab_03" class="tabs__block item details">
-                    <p class="">
+                <div id="tab_03" class="tabs__block block item details">
+                    <p class="city__details">
                         Aktobe
                     </p>
                     <div class="frame">
@@ -52,15 +54,24 @@
                         <p class="weather">Rain</p>
                         <img src="/img/icon-rain.svg" alt="Rain" class="icon__details">
                     </div>
+                    <div class="frame">
+                        <p class="date">17 May</p>
+                        <p class="time">18:00</p>
+                        <p class="temp">Temperature: 13°<br>Feels like: 10°</p>
+                        <p class="weather">Rain</p>
+                        <img src="/img/icon-rain.svg" alt="Rain" class="icon__details">
+                    </div>
                 </div>
             </div>
             <div class="item item3">Added Locations:</div>
-            <div class="item item4"> Amur <br>
+            <div class="item item4 cities"> Amur <br>
                 Samara <br>
                 Bali <br>
                 Dane <br>
                 Kilo <br>
-                Nur-Sultan
+                Nur-Sultan <br>
+                New-York <br>
+                Moscow <br>
             </div>
             <a href="#tab_01" class="item button tab__item item5">Now</a>
             <a href="#tab_02" class="item button tab__item item6">Details</a>

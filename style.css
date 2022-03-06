@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background: #b5ffff;
+    background: #f8ffb9;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -35,6 +35,7 @@
     grid-row: span 1;
     text-align: left;
     padding: 1px 10px;
+    position: relative;
 }
 .item2 {
     grid-column: span 3;
@@ -50,7 +51,7 @@
     text-align: left;
     padding-left: 10px;
     padding-top: 10px;
-    line-height: 40px;
+    line-height: 38px;
 }
 .button {
     font-size: 18px;
@@ -66,6 +67,13 @@
 .tabs__block {
     display: none;
     height: 348px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.tabs__block::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 .tabs__block:nth-child(1){
     background-color: white;
@@ -157,4 +165,39 @@
     top: 80px;
     right: 12px;
     background-color: white;
+}
+#tab_03>:first-child {
+    line-height: 20px;
+}
+.cities {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.cities::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.cityfinder {
+    width: 540px;
+    height: 43px;
+    border: none;
+    font-size: 18px;
+    background-color: white;
+    position: absolute;
+    left: 1;
+    top: 0;
+    outline: 0;
+}
+.find__btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    cursor: pointer;
+    border: 0;
+    background-image: url("./img/find-2.svg");
+    background-color: inherit;
+    background-position: center;
 }
