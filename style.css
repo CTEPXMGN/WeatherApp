@@ -33,17 +33,30 @@
 .item1 {
     grid-column: span 4;
     grid-row: span 1;
+    text-align: left;
+    padding: 1px 10px;
 }
 .item2 {
     grid-column: span 3;
     grid-row: span 2;
 }
+.item3 {
+    text-align: left;
+    padding: 5px 10px;
+}
 .item4 {
     grid-column: span 1;
     grid-row: span 2;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    line-height: 40px;
 }
 .button {
     font-size: 18px;
+    color: black;
+    line-height: 40px;
+    font-weight: bold;
 }
 .button:hover {
     background-color: black;
@@ -68,4 +81,80 @@
 }
 .tab__item {
     text-decoration: none;
+}
+#tab_01 {
+    position: relative;
+}
+.temperature {
+    position: absolute;
+    top: -60px;
+    left: 20px;
+    font-size: 70px;
+    line-height: 80px;
+    background-color: white;
+}
+.city {
+    position: absolute;
+    top: 270px;
+    left: 20px;
+    background-color: white;
+}
+.icon {
+    position: absolute;
+    top: 140px;
+    left: 110px;
+    background-color: white;
+}
+.like {
+    position: absolute;
+    top: 305px;
+    right: 20px;
+    background-color: white;
+}
+.details>p {
+    background-color: white;
+    line-height: 40px;
+    text-align: left;
+    margin: 20px 20px;
+}
+.frame {
+    border: 1px solid black;
+    width: 270px;
+    height: 120px;
+    margin: 15px auto;
+    background-color: white;
+    font-size: 18px;
+    position: relative;
+    line-height: 20px;
+}
+.date {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+}
+.time {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: white;
+}
+.temp {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    background-color: white;
+    text-align: left;
+}
+.weather {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    background-color: white;
+}
+.icon__details {
+    position: absolute;
+    top: 80px;
+    right: 12px;
+    background-color: white;
 }
