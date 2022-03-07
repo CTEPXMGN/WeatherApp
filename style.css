@@ -109,9 +109,10 @@
 }
 .icon {
     position: absolute;
-    top: 140px;
-    left: 110px;
+    top: 135px;
+    left: 105px;
     background-color: white;
+    width: 90px;
 }
 .like {
     position: absolute;
