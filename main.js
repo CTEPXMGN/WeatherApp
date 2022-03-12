@@ -27,7 +27,7 @@ async function findCity() {
         if (response.ok) {
             let json = await response.json();
             // inputCity.value = '';
-            outputCity.innerHTML = cityName;
+            outputCity.innerHTML = cityName[0].toUpperCase() + cityName.slice(1);
             
             let temperature = Math.floor(json.main.temp);
             outputTemp.innerHTML = temperature + `°`;
@@ -51,8 +51,7 @@ async function getWeather(){
         let response = await fetch(url);
         if (response.ok) {
             let json = await response.json();
-            outDetailsCity.innerHTML = cityName;
-            console.log(json);
+            outDetailsCity.innerHTML = cityName[0].toUpperCase() + cityName.slice(1);
             let temperature = Math.floor(json.main.temp);
             outDetailsTemp.innerHTML = 'Temperature: ' + temperature + `°`; 
 
@@ -62,9 +61,23 @@ async function getWeather(){
             let weather = json.weather[0].main;
             outDetailsWeather.innerHTML = `Weather: ` + weather;
 
-            let sunrise = 
+            let date1 = new Date(json.sys.sunrise * 1000);
+            let hours1 = date1.getHours();
+            let minutes1 = date1.getMinutes();
+            let sunriseTime = hours1 + ':' + minutes1;
+            outDetailsSunrise.innerHTML = `Sunrise: ` + sunriseTime;
 
+            let date2 = new Date(json.sys.sunset * 1000);
+            let hours2 = date2.getHours();
+            let minutes2 = date2.getMinutes();
+            let sunsetTime = hours2 + ':' + minutes2;
+            outDetailsSunset.innerHTML = `Sunrise: ` + sunsetTime;
+        } else {
+            alert('Введите корректное название');
+            inputCity.value = '';
         }
+    } else {
+        alert("Введите название города");
     }
 };
 
@@ -85,6 +98,7 @@ function addCity() {
         btnFindFromAdded.addEventListener('click', function() {
             inputCity.value = btnFindFromAdded.value;
             findCity();
+            
         });
     } else {
         alert("А что добавить-то?");
@@ -106,5 +120,6 @@ findedCity.forEach(function(item) {
     item.onclick = function () {
         inputCity.value = item.value;
         findCity();
+        getWeather();
     }
 });
