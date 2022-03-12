@@ -13,20 +13,20 @@
 <body>
     <div class="base">
         <div class="container">
-            <div class="item city__search item1">
+            <form onsubmit="findCity()" class="item city__search item1">
                 <input type="text" placeholder="Find a city" class="cityfinder input">
                 <input type="button" class="find__btn">
-            </div>
+            </form>
             <div class="tabs_body item2">
                 <div id="tab_01" class="tabs__block item">
                     <p class="temperature output__temperature"></p>
                     <img src=""  class="icon output__icon">
                     <p class="city output__city"> </p>
-                    <img src="/img/icon-like.svg" alt="Like" class="like ">
+                    <input type="button" class=" like like__btn">
                 </div>
                 <div id="tab_02" class="tabs__block item details">
-                    <p>
-                        Aktobe <br><br>
+                    <p class="output__city__details">
+                        <br><br>
                     </p>
                     <p>
                         Temperature: 14° <br>
@@ -37,7 +37,7 @@
                     </p>
                 </div>
                 <div id="tab_03" class="tabs__block block item details">
-                    <p class="city__details">
+                    <p class="city__details output__city">
                         Aktobe
                     </p>
                     <div class="frame">
@@ -64,14 +64,29 @@
                 </div>
             </div>
             <div class="item item3">Added Locations:</div>
-            <div class="item item4 cities"> Amur <br>
-                Samara <br>
-                Bali <br>
-                Dane <br>
-                Dubai <br>
-                Nur-Sultan <br>
-                London <br>
-                Moscow <br>
+            <div class="item item4 cities">
+                <ul id="ul">
+                    <li id="li">
+                        <input type="button" class="finded__city" value="Amur">
+                        <input type="button" class="delete__btn">
+                    </li>
+                    <li id="li">
+                        <input type="button" class="finded__city" value="Dubai">
+                        <input type="button" class="delete__btn">
+                    </li>
+                    <li id="li">
+                        <input type="button" class="finded__city" value="London">
+                        <input type="button" class="delete__btn">
+                    </li>
+                    <li id="li">
+                        <input type="button" class="finded__city" value="Dane">
+                        <input type="button" class="delete__btn">
+                    </li>
+                    <li id="li">
+                        <input type="button" class="finded__city" value="Magnitogorsk">
+                        <input type="button" class="delete__btn">
+                    </li>
+                </ul>
             </div>
             <a href="#tab_01" class="item button tab__item item5">Now</a>
             <a href="#tab_02" class="item button tab__item item6">Details</a>

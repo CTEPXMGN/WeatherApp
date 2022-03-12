@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background: #f8ffb9;
+    background: #556479;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -49,7 +49,6 @@
     grid-column: span 1;
     grid-row: span 2;
     text-align: left;
-    padding-left: 10px;
     padding-top: 10px;
     line-height: 38px;
 }
@@ -115,10 +114,16 @@
     width: 90px;
 }
 .like {
+    width: 24px;
+    height: 25px;
     position: absolute;
     top: 305px;
     right: 20px;
-    background-color: white;
+    cursor: pointer;
+    border: 0;
+    background-image: url("./img/icon-like.svg");
+    background-color: inherit;
+    background-position: center;
 }
 .details>p {
     background-color: white;
@@ -201,4 +206,29 @@
     background-image: url("./img/find-2.svg");
     background-color: inherit;
     background-position: center;
+}
+ul,
+ul>li {
+    list-style: none;
+    background-color: white;
+    position: relative;
+    margin: 0;
+    padding-left: 8px;
+}
+.delete__btn {
+    width: 19px;
+    height: 15px;
+    border: 0;
+    cursor: pointer;
+    background-color: inherit;
+    background-position: center;
+    background-image: url("./img/close-icon.svg");
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.finded__city {
+    border: 0;
+    background-color: white;
+    font-size: 24px;
 }
