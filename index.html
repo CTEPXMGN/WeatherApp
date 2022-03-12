@@ -13,7 +13,7 @@
 <body>
     <div class="base">
         <div class="container">
-            <form onsubmit="findCity()" class="item city__search item1">
+            <form onsubmit="findCity(), getWeather()" class="item city__search item1">
                 <input type="text" placeholder="Find a city" class="cityfinder input">
                 <input type="button" class="find__btn">
             </form>
@@ -28,13 +28,13 @@
                     <p class="output__city__details">
                         <br><br>
                     </p>
-                    <p>
-                        Temperature: 14° <br>
-                        Feels like: 10° <br>
-                        Weather: Clouds <br>
-                        Sunrise: 03:21 <br>
-                        Sunset: 18:54
-                    </p>
+                    <ul>
+                        <li class="output__details__temperature"></li>
+                        <li class="output__details__temperature2"></li>
+                        <li class="output__details__weather"></li>
+                        <li class="output__details__sunrise">Sunrise: 03:21  </li>
+                        <li class="output__details__sunset">Sunset: 18:54   </li>
+                    </ul>
                 </div>
                 <div id="tab_03" class="tabs__block block item details">
                     <p class="city__details output__city">
