@@ -1,5 +1,6 @@
 let cityName = '';
 const serverUrl = 'https://api.openweathermap.org/data/2.5/weather';
+const serverUrl2 = 'https://api.openweathermap.org/data/2.5/forecast';
 const apiKey = '1041b355b3b6422eb66d9f5e517f7b52';
 
 const findBtn = document.querySelector('.find__btn');
@@ -10,13 +11,24 @@ const outputTemp = document.querySelector('.output__temperature');
 const outputIcon = document.querySelector('.output__icon');
 const addLike = document.querySelector('.like__btn');
 const deleteButton = document.querySelectorAll('.delete__btn');
-const findedCity = document.querySelectorAll('.finded__city');
+const foundCity = document.querySelectorAll('.finded__city');
 const outDetailsCity = document.querySelector('.output__city__details');
 const outDetailsTemp = document.querySelector('.output__details__temperature');
 const outDetailsTemp2 = document.querySelector('.output__details__temperature2');
 const outDetailsWeather = document.querySelector('.output__details__weather');
 const outDetailsSunrise = document.querySelector('.output__details__sunrise');
 const outDetailsSunset = document.querySelector('.output__details__sunset');
+
+async function findCityForecast() {
+    cityName = inputCity.value;
+    const url = `${serverUrl2}?q=${cityName}&appid=${apiKey}&units=metric`;
+    console.log(url);
+    let response = await fetch(url);
+    let json = await response.json();
+    console.log(json);
+}
+
+findBtn.addEventListener('click', findCityForecast);
 
 async function findCity() {
     if (inputCity.value !== "") {
@@ -116,7 +128,7 @@ deleteButton.forEach(function(item) {
     }
 });
 
-findedCity.forEach(function(item) {
+foundCity.forEach(function(item) {
     item.onclick = function () {
         inputCity.value = item.value;
         findCity();
