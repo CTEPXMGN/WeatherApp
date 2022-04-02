@@ -91,6 +91,7 @@
 }
 #tab_01 {
     position: relative;
+    background-color: white;
 }
 .temperature {
     position: absolute;
@@ -158,10 +159,17 @@
     right: 10px;
     background-color: white;
 }
-.temp {
+.temp1 {
     position: absolute;
     left: 10px;
     top: 50px;
+    background-color: white;
+    text-align: left;
+}
+.temp2 {
+    position: absolute;
+    left: 10px;
+    top: 75px;
     background-color: white;
     text-align: left;
 }
@@ -176,6 +184,9 @@
     top: 80px;
     right: 12px;
     background-color: white;
+    width: 35px;
+    background-color: inherit;
+    background-position: center;
 }
 #tab_03>:first-child {
     line-height: 20px;
@@ -237,3 +248,4 @@ ul>li {
     background-color: white;
     font-size: 24px;
 }
+

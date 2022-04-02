@@ -13,7 +13,7 @@
 <body>
     <div class="base">
         <div class="container">
-            <form onsubmit="findCity(), getWeather()" class="item city__search item1">
+            <form onsubmit="findCity(), getWeather(), findCityForecast()" class="item city__search item1">
                 <input type="text" placeholder="Find a city" class="cityfinder input">
                 <input type="button" class="find__btn">
             </form>
@@ -37,36 +37,22 @@
                     </ul>
                 </div>
                 <div id="tab_03" class="tabs__block block item details">
-                    <p class="city__details output__city">
-                        Aktobe
-                    </p>
+                    <p class="city__details output__forecast__city"></p>
                     <div class="frame">
-                        <p class="date">17 May</p>
-                        <p class="time">12:00</p>
-                        <p class="temp">Temperature: 13°<br>Feels like: 10°</p>
-                        <p class="weather">Rain</p>
-                        <img src="/img/icon-rain.svg" alt="Rain" class="icon__details">
+                        <p class="date date-forecast">17 May</p>
+                        <p class="time time-forecast"></p>
+                        <p class="temp1  temp-forecast1"></p>
+                        <p class="temp2  temp-forecast2"></p>
+                        <p class="weather weather-forecast"></p>
+                        <img src="/img/icon-rain.svg" alt="icon" class="icon__details output__icon__forecast">
                     </div>
-                    <div class="frame">
-                        <p class="date">17 May</p>
-                        <p class="time">15:00</p>
-                        <p class="temp">Temperature: 13°<br>Feels like: 10°</p>
-                        <p class="weather">Rain</p>
-                        <img src="/img/icon-rain.svg" alt="Rain" class="icon__details">
-                    </div>
-                    <div class="frame">
-                        <p class="date">17 May</p>
-                        <p class="time">18:00</p>
-                        <p class="temp">Temperature: 13°<br>Feels like: 10°</p>
-                        <p class="weather">Rain</p>
-                        <img src="/img/icon-rain.svg" alt="Rain" class="icon__details">
-                    </div>
+                    
                 </div>
             </div>
             <div class="item item3">Added Locations:</div>
             <div class="item item4 cities">
                 <ul id="ul">
-                    <li id="li">
+                    <!-- <li id="li">
                         <input type="button" class="finded__city" value="Amur">
                         <input type="button" class="delete__btn">
                     </li>
@@ -85,7 +71,7 @@
                     <li id="li">
                         <input type="button" class="finded__city" value="Magnitogorsk">
                         <input type="button" class="delete__btn">
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <a href="#tab_01" class="item button tab__item item5">Now</a>
@@ -94,6 +80,6 @@
 
         </div>
     </div>
-    <script src="/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
